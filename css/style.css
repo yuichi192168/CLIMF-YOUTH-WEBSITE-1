@@ -211,7 +211,7 @@
 	  .gallery h2 {
 		font-size: 2rem;
 		margin-bottom: 30px;
-		color: #333;
+		color: #ffffff;
 	  }
 	
 	  /* Responsive Gallery Grid */
@@ -1029,7 +1029,7 @@ header .ham-burger.active span:nth-child(2){
 .gallery h2{
 	font-size: 30px;
     font-weight: 500;
-    color: #000000;
+    color: #ffffff;
     padding: 0px 0px 20px;
     text-align: center;
 }
