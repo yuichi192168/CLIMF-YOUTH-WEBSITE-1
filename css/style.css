@@ -560,7 +560,6 @@ header .ham-burger.active span:nth-child(2){
     padding: 15px;
     --webkit-display: flex;
     position: relative;
-    transition: background-image 2s ease-in-out; /* Smooth transition */
 }
 
 .home .go-down{
