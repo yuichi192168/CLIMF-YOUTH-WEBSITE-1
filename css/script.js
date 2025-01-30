@@ -67,7 +67,17 @@ const bibleQuoteImages = [
   "images/bv2.jpg",
   "images/bv3.jpg",
   "images/bv4.jpg",
-  // Add more image paths as needed
+  "images/bv5.jpg",
+  "images/bv6.jpg",
+  "images/bv7.jpg",
+  "images/bv8.jpg",
+  "images/bv9.jpg",
+  "images/bv10.jpg",
+  "images/bv11.jpg",
+  "images/bv12.jpg",
+  "images/bv13.jpg",
+  "images/bv14.jpg",
+  "images/bv15.jpg",
 ];
 
 // Function to Display Random Quote Image
