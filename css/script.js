@@ -167,17 +167,7 @@ window.addEventListener('load', function () {
       window.instgrm.Embeds.process();
     }
   });
-  let images = ['images/home1.png', 'images/home2.png']; // Array of images
-let currentIndex = 0;
 
-function changeBackgroundImage() {
-    // Set the next image
-    currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
-    document.querySelector('.home').style.backgroundImage = `url(${images[currentIndex]})`; // Change background image
-}
-
-// Change the background every 5 seconds
-setInterval(changeBackgroundImage, 5000);
 function playAudio() {
   var audio = document.getElementById("backgroundAudio");
   
