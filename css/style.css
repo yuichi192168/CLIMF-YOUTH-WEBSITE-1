@@ -556,7 +556,7 @@ header .ham-burger.active span:nth-child(2){
 .home{
     height: 100vh;
     background-size: cover;
-	background-image: url('images/home1.png');
+    background-image: url('images/home1.png');
     padding: 15px;
     --webkit-display: flex;
     position: relative;
