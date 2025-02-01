@@ -1,4 +1,46 @@
 
+const slider = document.getElementById('slider');
+const nextButton = document.getElementById('next');
+const prevButton = document.getElementById('prev');
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('#slider .box');
+const totalSlides = slides.length;
+
+function updateSlide() {
+  const slideWidth = slides[0].offsetWidth;
+  slider.style.transition = 'transform 0.5s ease';
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+function goNext() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlide();
+}
+
+function goPrev() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlide();
+}
+
+nextButton.addEventListener('click', goNext);
+prevButton.addEventListener('click', goPrev);
+
+window.addEventListener('resize', updateSlide);
+
+//=========================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
 
   $(".ham-burger, .nav ul li a").click(function(){
