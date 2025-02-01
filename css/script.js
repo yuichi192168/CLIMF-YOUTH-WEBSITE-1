@@ -1,3 +1,35 @@
+function validateEmail() {
+  const emailField = document.getElementById('email');
+  const email = emailField.value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if (emailRegex.test(email)) {
+      document.getElementById('password').disabled = false;
+      document.getElementById('confirm-password').disabled = false;
+  } else {
+      alert('Please enter a valid email address.');
+      emailField.focus();
+  }
+}
+
+
+//script sa register
+function handleRegister(event) {
+  event.preventDefault();
+  alert('You have successfully filled up!');
+  window.location.href = 'index.html'; 
+}
+
+//script sa message
+function handleMessage(event) {
+  event.preventDefault();
+  alert('You have successfully sent a message!');
+  window.location.href = 'index.html'; 
+}
+
+
+
+
 
 const slider = document.getElementById('slider');
 const nextButton = document.getElementById('next');
