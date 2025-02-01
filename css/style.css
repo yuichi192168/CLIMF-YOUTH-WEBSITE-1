@@ -480,21 +480,22 @@ body{
 
 /*Header*/
 
-header{
-	position:fixed;
-	left: 0px;
-	top:0px;
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
 	width: 100%;
 	z-index: 10;
 	background-color: #000000;
-	padding:15px 15px;
-}
-header .container{
-	-webkit-display: flex;
+	padding: 15px 15px;
+	color: white;
+  }
+  
+  header .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
+  }
 
 header .logo a{
 	font-size: 30px;
