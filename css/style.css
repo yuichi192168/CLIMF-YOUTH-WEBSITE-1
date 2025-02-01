@@ -2,6 +2,21 @@
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+
+.slider-wrapper .box a {
+	display: inline-block;
+	background-color: #A594FC;
+	color: white;
+	text-decoration: none;
+	padding: 10px 15px;
+	margin-top: 10px;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 14px;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+
 .slider-wrapper {
 	display: flex;
 	transition: transform 0.5s ease;
