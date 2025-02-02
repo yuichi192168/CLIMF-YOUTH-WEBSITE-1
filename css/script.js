@@ -8,19 +8,7 @@
 
 
 
-function validateEmail() {
-  const emailField = document.getElementById('email');
-  const email = emailField.value;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-  if (emailRegex.test(email)) {
-      document.getElementById('password').disabled = false;
-      document.getElementById('confirm-password').disabled = false;
-  } else {
-      alert('Please enter a valid email address.');
-      emailField.focus();
-  }
-}
+
 
 
 //script sa register
@@ -30,38 +18,6 @@ function handleRegister(event) {
   window.location.href = 'index.html'; 
 }
 
-// Script for handling the form message
-function handleMessage(event) {
-  event.preventDefault();
-
- // Get form input values
- const name = event.target.name.value;
- const email = event.target.email.value;
- const phone = event.target.phone.value;
- const message = event.target.message.value;
-
- // Load existing messages or initialize an empty array
- const existingMessages = JSON.parse(localStorage.getItem("messagesData")) || [];
-
- // Add new message to the array
- existingMessages.push({ name, email, phone, message });
-
- // Save updated messages back to local storage
- localStorage.setItem("messagesData", JSON.stringify(existingMessages));
-
- alert("Message saved successfully!");
-
- // Clear form fields
- event.target.reset();
-}
-
-// Optional: Load and display saved messages in the console on page load
-window.onload = function () {
- const savedMessages = JSON.parse(localStorage.getItem("messagesData")) || [];
- if (savedMessages.length) {
-   console.log("Saved Messages:", savedMessages);
- }
-};
 
 $(document).ready(function(){
 
@@ -99,6 +55,54 @@ $(document).ready(function(){
    }
   })
   })
+
+// Email validation
+function validateEmail() {
+  const emailField = document.getElementById('email');
+  const email = emailField.value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if (emailRegex.test(email)) {
+      document.getElementById('password').disabled = false;
+      document.getElementById('confirm-password').disabled = false;
+  } else {
+      alert('Please enter a valid email address.');
+      emailField.focus();
+  }
+}
+
+// Form message handling
+function handleMessage(event) {
+  event.preventDefault();
+
+  // Get form input values
+  const name = event.target.name.value;
+  const email = event.target.email.value;
+  const phone = event.target.phone.value;
+  const message = event.target.message.value;
+
+  // Load existing messages or initialize an empty array
+  const existingMessages = JSON.parse(localStorage.getItem("messagesData")) || [];
+
+  // Add new message to the array
+  existingMessages.push({ name, email, phone, message });
+
+  // Save updated messages back to local storage
+  localStorage.setItem("messagesData", JSON.stringify(existingMessages));
+
+  alert("Message saved successfully!");
+
+  // Clear form fields
+  event.target.reset();
+}
+
+// Optional: Load and display saved messages in the console on page load
+window.onload = function () {
+  const savedMessages = JSON.parse(localStorage.getItem("messagesData")) || [];
+  if (savedMessages.length) {
+    console.log("Saved Messages:", savedMessages);
+  }
+};
 
 document.getElementById("generateQuoteBtn1").addEventListener("click", function () {
   this.classList.add("clicked");
