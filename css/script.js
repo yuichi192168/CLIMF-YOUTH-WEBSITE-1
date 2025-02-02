@@ -20,13 +20,38 @@ function handleRegister(event) {
   window.location.href = 'index.html'; 
 }
 
-//script sa message
+// Script for handling the form message
 function handleMessage(event) {
   event.preventDefault();
-  alert('You have successfully sent a message!');
-  window.location.href = 'index.html'; 
+
+ // Get form input values
+ const name = event.target.name.value;
+ const email = event.target.email.value;
+ const phone = event.target.phone.value;
+ const message = event.target.message.value;
+
+ // Load existing messages or initialize an empty array
+ const existingMessages = JSON.parse(localStorage.getItem("messagesData")) || [];
+
+ // Add new message to the array
+ existingMessages.push({ name, email, phone, message });
+
+ // Save updated messages back to local storage
+ localStorage.setItem("messagesData", JSON.stringify(existingMessages));
+
+ alert("Message saved successfully!");
+
+ // Clear form fields
+ event.target.reset();
 }
 
+// Optional: Load and display saved messages in the console on page load
+window.onload = function () {
+ const savedMessages = JSON.parse(localStorage.getItem("messagesData")) || [];
+ if (savedMessages.length) {
+   console.log("Saved Messages:", savedMessages);
+ }
+};
 
 
 
